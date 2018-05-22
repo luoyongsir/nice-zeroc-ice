@@ -21,8 +21,6 @@ public class IceConfigServer extends IceConfig {
 			throws BeansException {
 		super.processProperties(beanFactory, props);
 		if (getIceProperties() != null) {
-//			setPropertyByKey(IceConst.ICE_ENDPOINTS);
-
 			// 初始化ic
 			InitializationData initData = new InitializationData();
 			initData.properties = getIceProperties();
