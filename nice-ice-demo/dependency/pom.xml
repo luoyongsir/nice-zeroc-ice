@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.nice.ice.demo</groupId>
+	<artifactId>dependency</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>dependency</name>
+	
+	<properties>
+		<ice.demo.version>1.0.0-SNAPSHOT</ice.demo.version>
+		<ice.version>3.7.0</ice.version>
+		<spring.version>4.3.17.RELEASE</spring.version>
+		<springboot.version>1.5.12.RELEASE</springboot.version>
+		<junit.version>4.12</junit.version>
+		<slf4j.version>1.7.25</slf4j.version>
+		<logback.version>1.2.3</logback.version>
+
+		<!-- Plugin的属性 -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<java.version>1.8</java.version>
+		<maven.compiler.source>${java.version}</maven.compiler.source>
+		<maven.compiler.target>${java.version}</maven.compiler.target>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+
+            <dependency>
+				<groupId>com.nice.ice.demo</groupId>
+                <artifactId>demo-slice</artifactId>
+                <version>${ice.demo.version}</version>
+            </dependency>
+
+			<dependency>
+				<groupId>com.nice.ice</groupId>
+				<artifactId>nice-ice-ant</artifactId>
+				<version>1.0.0-RELEASE</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.nice.ice</groupId>
+				<artifactId>nice-ice-base</artifactId>
+				<version>1.0.0-RELEASE</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.zeroc</groupId>
+				<artifactId>ice</artifactId>
+				<version>${ice.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.zeroc</groupId>
+				<artifactId>icegrid</artifactId>
+				<version>${ice.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.zeroc</groupId>
+				<artifactId>icessl</artifactId>
+				<version>${ice.version}</version>
+			</dependency>
+
+			<!-- spring boot -->
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-dependencies</artifactId>
+				<version>${springboot.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+
+			<!-- scope test -->
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>${junit.version}</version>
+				<scope>test</scope>
+			</dependency>
+
+			<!-- LOGGING begin -->
+			<!-- logback -->
+			<dependency>
+				<groupId>ch.qos.logback</groupId>
+				<artifactId>logback-classic</artifactId>
+				<version>${logback.version}</version>
+			</dependency>
+			<!-- slf4j -->
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-api</artifactId>
+				<version>${slf4j.version}</version>
+			</dependency>
+			<!-- 代码直接调用log4j会被桥接到slf4j -->
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>log4j-over-slf4j</artifactId>
+				<version>${slf4j.version}</version>
+			</dependency>
+			<!-- 代码直接调用commons-logging会被桥接到slf4j -->
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>jcl-over-slf4j</artifactId>
+				<version>${slf4j.version}</version>
+			</dependency>
+			<!-- 代码直接调用java.util.logging会被桥接到slf4j -->
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>jul-to-slf4j</artifactId>
+				<version>${slf4j.version}</version>
+			</dependency>
+			<!-- LOGGING end -->
+		</dependencies>
+	</dependencyManagement>
+
+	<repositories>
+		<repository>
+			<id>nexus</id>
+			<name>Team Nexus Repository</name>
+			<url>http://maven.aliyun.com/nexus/content/repositories/</url>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>nexus</id>
+			<name>Team Nexus Repository</name>
+			<url>http://maven.aliyun.com/nexus/content/repositories/</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-antrun-plugin</artifactId>
+					<version>1.8</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+</project>
