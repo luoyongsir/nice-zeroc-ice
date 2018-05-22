@@ -48,7 +48,7 @@ maven 使用示例
                         </goals>
                         <configuration>
                             <target name="slice2java">
-                                <taskdef name="slice2java" classname="Slice2JavaTask"
+                                <taskdef name="slice2java" classname="com.nice.ice.Slice2JavaTask"
                                          classpathref="maven.plugin.classpath"/>
                                 <slice2java outputdir="${src.code.dir}">
                                     <fileset dir="${ice.file.dir}" includes="**/*.ice"/>
