@@ -1,8 +1,8 @@
 package com.nice.ice.init;
 
 import com.nice.ice.annotation.IceServer;
-import com.nice.ice.comm.IceConfigServer;
 import com.nice.ice.comm.IceConst;
+import com.nice.ice.config.IceConfigServer;
 import com.zeroc.Ice.ObjectAdapter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

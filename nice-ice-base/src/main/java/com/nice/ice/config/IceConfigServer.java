@@ -1,4 +1,4 @@
-package com.nice.ice.comm;
+package com.nice.ice.config;
 
 import com.zeroc.Ice.Communicator;
 import com.zeroc.Ice.InitializationData;
@@ -9,12 +9,12 @@ import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import java.util.Properties;
 
 /**
- * ice客户端配置文件工具类
+ * ice服务端配置文件工具类
  * @author Luo Yong
  */
-public class IceConfigClient extends IceConfig {
+public class IceConfigServer extends IceConfig {
 
-	private Communicator clientIc;
+	private Communicator serverIc;
 
 	@Override
 	protected void processProperties(ConfigurableListableBeanFactory beanFactory, Properties props)
@@ -24,15 +24,15 @@ public class IceConfigClient extends IceConfig {
 			// 初始化ic
 			InitializationData initData = new InitializationData();
 			initData.properties = getIceProperties();
-			setClientIc(Util.initialize(initData));
+			setServerIc(Util.initialize(initData));
 		}
 	}
 
-	public Communicator getClientIc() {
-		return clientIc;
+	public Communicator getServerIc() {
+		return serverIc;
 	}
 
-	private void setClientIc(Communicator clientIc) {
-		this.clientIc = clientIc;
+	private void setServerIc(Communicator serverIc) {
+		this.serverIc = serverIc;
 	}
 }

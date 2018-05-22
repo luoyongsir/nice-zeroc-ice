@@ -1,5 +1,6 @@
-package com.nice.ice.comm;
+package com.nice.ice.config;
 
+import com.nice.ice.comm.IceConst;
 import com.zeroc.Ice.Util;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
