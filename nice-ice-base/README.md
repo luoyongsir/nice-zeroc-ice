@@ -41,6 +41,6 @@ ZeroC ICE 结合 Spring 的封装
 >}
 
 
-#### 注意pom文件中依赖的jar包
+#### 注意pom文件中依赖的jar包，具体可以参照nice-ice-demo
 
 <br/>
