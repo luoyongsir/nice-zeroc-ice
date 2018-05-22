@@ -1,7 +1,7 @@
 package com.nice.ice.init;
 
-import com.nice.ice.comm.IceConfigClient;
 import com.nice.ice.annotation.IceClient;
+import com.nice.ice.comm.IceConfigClient;
 import com.nice.ice.comm.IceConst;
 import com.zeroc.Ice.ObjectPrx;
 import org.slf4j.Logger;
@@ -109,6 +109,10 @@ public class IceClientInit implements BeanPostProcessor {
 				// 初始化代理对象
 				Method method = Class.forName(key).getDeclaredMethod("uncheckedCast", ObjectPrx.class);
 				prx = (ObjectPrx) method.invoke(null, base);
+
+//				// 使用动态代理，拦截解析服务端返回的异常
+//				prx = IceInvClient.getPrx(prx);
+
 				// 放入缓存
 				IO_CACHE.put(cacheKey, prx);
 			} catch (IllegalAccessException | ClassNotFoundException | NoSuchMethodException

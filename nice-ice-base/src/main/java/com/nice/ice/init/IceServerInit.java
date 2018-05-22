@@ -71,6 +71,8 @@ public class IceServerInit implements ApplicationContextAware {
 			// 客户端调用时需要和这个ice key对应
 			String iceKey = entry.getValue().getClass().getInterfaces()[0].getName() + "Prx";
 			com.zeroc.Ice.Object obj = (com.zeroc.Ice.Object) entry.getValue();
+//			// 使用动态代理拦截封装异常
+//			com.zeroc.Ice.Object obj = IceInvServer.getPrx((com.zeroc.Ice.Object) entry.getValue());
 			adapter.add(obj, com.zeroc.Ice.Util.stringToIdentity(iceKey));
 		}
 		if (adapter != null) {
