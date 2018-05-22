@@ -15,9 +15,9 @@ maven 使用示例
             <version>your.version</version>
         </dependency>
         <dependency>
-            <groupId>com.zeroc</groupId>
-            <artifactId>ice-ant</artifactId>
-            <version>latest.version</version>
+            <groupId>com.nice.ice</groupId>
+            <artifactId>nice-ice-ant</artifactId>
+            <version>1.0.0-RELEASE</version>
         </dependency>
     </dependencies>
 
@@ -36,7 +36,7 @@ maven 使用示例
                         </goals>
                         <configuration>
                             <target name="delete" description="删除java代码">
-                                <delete dir="${src.code.dir}/com"/>
+                                <delete dir="${src.code.dir}"/>
                             </target>
                         </configuration>
                     </execution>
@@ -59,9 +59,9 @@ maven 使用示例
                 </executions>
                 <dependencies>
                     <dependency>
-                        <groupId>com.zeroc</groupId>
-                        <artifactId>ice-ant</artifactId>
-                        <version>latest.version</version>
+                        <groupId>com.nice.ice</groupId>
+                        <artifactId>nice-ice-ant</artifactId>
+                        <version>1.0.0-RELEASE</version>
                     </dependency>
                 </dependencies>
             </plugin>
