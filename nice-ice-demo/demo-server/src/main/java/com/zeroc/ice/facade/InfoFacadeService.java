@@ -29,10 +29,7 @@ public class InfoFacadeService implements InfoFacade {
 
 	@Override
 	public String testException(Current current) {
-		if (1 == 1) {
-			LOG.info("testException");
-			throw new RuntimeException(" this is testException ");
-		}
-		return "testException";
+		LOG.info(" This is test Exception ");
+		throw new RuntimeException(" This is test Exception ");
 	}
 }
