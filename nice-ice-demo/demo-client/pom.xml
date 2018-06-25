@@ -1,82 +1,82 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-	<parent>
-		<groupId>com.nice.ice.demo</groupId>
-		<artifactId>dependency</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
-	</parent>
-	<artifactId>demo-client</artifactId>
-	<version>${ice.demo.version}</version>
-	<packaging>jar</packaging>
-	<name>demo-client</name>
+    <parent>
+        <groupId>com.nice.ice.demo</groupId>
+        <artifactId>dependency</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <artifactId>demo-client</artifactId>
+    <version>${ice.demo.version}</version>
+    <packaging>jar</packaging>
+    <name>demo-client</name>
 
-	<dependencies>
+    <dependencies>
 
-		<dependency>
-			<groupId>com.zeroc</groupId>
-			<artifactId>ice</artifactId>
-		</dependency>
+        <dependency>
+            <groupId>com.zeroc</groupId>
+            <artifactId>ice</artifactId>
+        </dependency>
 
-		<dependency>
-			<groupId>com.nice.ice</groupId>
-			<artifactId>nice-ice-base</artifactId>
-		</dependency>
+        <dependency>
+            <groupId>com.nice.ice</groupId>
+            <artifactId>nice-ice-base</artifactId>
+        </dependency>
 
-		<dependency>
-			<groupId>com.nice.ice.demo</groupId>
-			<artifactId>demo-slice</artifactId>
-		</dependency>
+        <dependency>
+            <groupId>com.nice.ice.demo</groupId>
+            <artifactId>demo-slice</artifactId>
+        </dependency>
 
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter</artifactId>
-		</dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
 
-		<dependency>
-			<groupId>ch.qos.logback</groupId>
-			<artifactId>logback-classic</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-api</artifactId>
-		</dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+        </dependency>
 
-	</dependencies>
+    </dependencies>
 
-	<!-- 定义打包环境变量，开发环境；测试环境；生产环境 -->
-	<profiles>
-		<profile>
-			<id>dev</id>
-			<properties>
-				<profiles.active>dev</profiles.active>
-			</properties>
-			<activation>
-				<activeByDefault>true</activeByDefault>
-			</activation>
-		</profile>
-		<profile>
-			<id>test</id>
-			<properties>
-				<profiles.active>test</profiles.active>
-			</properties>
-		</profile>
-		<profile>
-			<id>pro</id>
-			<properties>
-				<profiles.active>pro</profiles.active>
-			</properties>
-		</profile>
-	</profiles>
+    <!-- 定义打包环境变量，开发环境；测试环境；生产环境 -->
+    <profiles>
+        <profile>
+            <id>dev</id>
+            <properties>
+                <profiles.active>dev</profiles.active>
+            </properties>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+        </profile>
+        <profile>
+            <id>test</id>
+            <properties>
+                <profiles.active>test</profiles.active>
+            </properties>
+        </profile>
+        <profile>
+            <id>pro</id>
+            <properties>
+                <profiles.active>pro</profiles.active>
+            </properties>
+        </profile>
+    </profiles>
 
-	<build>
-		<sourceDirectory>src/main/java</sourceDirectory>
-		<resources>
-			<resource>
-				<directory>src/main/resources</directory>
-				<filtering>true</filtering>
-			</resource>
-		</resources>
-	</build>
+    <build>
+        <sourceDirectory>src/main/java</sourceDirectory>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+    </build>
 </project>
