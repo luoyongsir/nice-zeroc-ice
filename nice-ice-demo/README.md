@@ -1,5 +1,5 @@
 
-# nice-ice-base 的测试demo
+# 示例demo
 
 运行方式如下：
 

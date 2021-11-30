@@ -1,5 +1,5 @@
 # nice-ice-base
-ZeroC ICE 结合 Spring 的封装
+ZeroC ICE 基于JDK动态代理 结合 Spring 的封装
 
 #### 使用本jar包，可以极大简化ice的使用。具体使用方法如下
 
