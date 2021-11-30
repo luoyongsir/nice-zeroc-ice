@@ -17,9 +17,7 @@
         <changelist>-SNAPSHOT</changelist>
         <revision>1.0.0${changelist}</revision>
 
-        <ice.demo.version>1.0.0-SNAPSHOT</ice.demo.version>
         <ice.version>3.7.6</ice.version>
-        <spring-boot.version>2.3.12.RELEASE</spring-boot.version>
     </properties>
 
     <modules>
