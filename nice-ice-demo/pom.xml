@@ -7,19 +7,13 @@
         <artifactId>nice-zeroc-ice</artifactId>
         <version>${revision}</version>
     </parent>
-    <artifactId>nice-ice-ant</artifactId>
+    <artifactId>nice-ice-demo</artifactId>
+    <packaging>pom</packaging>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.apache.ant</groupId>
-            <artifactId>ant</artifactId>
-            <version>1.10.12</version>
-            <optional>true</optional>
-        </dependency>
-    </dependencies>
-
-    <build>
-        <sourceDirectory>src/main/java</sourceDirectory>
-    </build>
+    <modules>
+        <module>demo-client</module>
+        <module>demo-server</module>
+        <module>demo-slice</module>
+    </modules>
 
 </project>
