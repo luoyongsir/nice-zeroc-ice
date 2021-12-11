@@ -55,12 +55,6 @@
 
             <dependency>
                 <groupId>com.zeroc</groupId>
-                <artifactId>icegrid</artifactId>
-                <version>${ice.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.zeroc</groupId>
                 <artifactId>icessl</artifactId>
                 <version>${ice.version}</version>
             </dependency>
