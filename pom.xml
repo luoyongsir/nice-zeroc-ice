@@ -18,6 +18,7 @@
         <revision>1.0.0${changelist}</revision>
 
         <ice.version>3.7.6</ice.version>
+        <maven.test.skip>true</maven.test.skip>
     </properties>
 
     <modules>
